@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Estuardo Porras';
-export const siteTitle = 'Cambiandole todo Chaaaa!';
+export const siteTitle = `Un título serio pa' la lista`;
 
 export default function Layout({ children, home }) {
   return (
