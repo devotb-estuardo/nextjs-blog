@@ -7,7 +7,7 @@ import Link from 'next/link';
 const name = 'Estuardo Porras';
 export const siteTitle = `Un título serio pa' la lista`;
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: { children: React.ReactNode, home?: boolean }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -61,7 +61,9 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <button className="bg-sky-500 hover:bg-sky-700 cursor-pointer">
+            <Link href="/">← Back to home</Link>
+          </button>
         </div>
       )}
     </div>
